@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.project.DecryptScreenController"
+      alignment="CENTER" spacing="20" style="-fx-background-color: rgb(207, 226, 243); -fx-padding: 20; -fx-border-color: #d0d0d0; -fx-border-width: 1; -fx-border-radius: 5;">
+
+    <Label text="Desencriptar arxiu" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Arxiu"/>
+        <TextField fx:id="encryptedFileField" promptText="Select Encrypted File" style="-fx-font-size: 14;"/>
+        <Button text="Seleccionar" onAction="#selectFile" style="-fx-font-size: 14;"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+      <Label text="Clau privada"/>
+      <TextField fx:id="privateKeyField" promptText="Enter private key" style="-fx-font-size: 14;"/>
+      <Button text="Seleccionar" onAction="#selectPrivateKeyFile" style="-fx-font-size: 14;"/>
+  </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Contrasenya"/>
+        <PasswordField fx:id="passwordField" promptText="Enter password" style="-fx-font-size: 14;"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Destí"/>
+        <TextField fx:id="outputFileField" promptText="Enter destination" style="-fx-font-size: 14;"/>
+    </HBox>
+
+    <Button text="Desencriptar" onAction="#decryptFile" style="-fx-font-size: 14;"/>
+
+</VBox>
